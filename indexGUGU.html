@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Natureza do Espaço — Milton Santos</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f2f4f7;
+      color: #222;
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 950px;
+      margin: 40px auto;
+      padding: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 40px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.10);
+    }
+
+    h1 {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 10px;
+      font-size: 32px;
+    }
+
+    .autor {
+      text-align: center;
+      color: #666;
+      margin-bottom: 30px;
+      font-size: 18px;
+    }
+
+    p {
+      text-align: justify;
+      font-size: 17px;
+      margin-bottom: 22px;
+    }
+
+    .controles {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 25px;
+    }
+
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 13px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background: #1d3557;
+      color: white;
+      transition: 0.2s;
+    }
+
+    button:hover {
+      opacity: 0.85;
+      transform: translateY(-1px);
+    }
+
+    #status {
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+      margin-bottom: 25px;
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 15px auto;
+        padding: 10px;
+      }
+
+      .card {
+        padding: 22px;
+      }
+
+      h1 {
+        font-size: 26px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+
+      button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="card">
+
+      <h1>A NATUREZA DO ESPAÇO</h1>
+
+      <div class="autor">
+        Milton Santos
+      </div>
+
+      <div class="controles">
+        <button onclick="iniciarLeitura()">🔊 Ouvir texto</button>
+        <button onclick="pararLeitura()">⏹ Parar</button>
+      </div>
+
+      <div id="status">
+        Clique em "Ouvir texto" para começar.
+      </div>
+
+      <p>
+        Publicado em 1996, A Natureza do Espaço faz parte da fase madura do pensamento de Milton Santos. O livro reúne ideias que o autor desenvolveu durante anos para explicar como a sociedade produz e transforma o espaço geográfico. Na época, novas tecnologias de informação e comunicação estavam acelerando a circulação de pessoas, informações e mercadorias, tornando necessário pensar o espaço de uma nova maneira.
+      </p>
+
+      <p>
+        Para Milton Santos, o espaço não é apenas o lugar onde as coisas acontecem. Ele é formado pela relação entre aquilo que existe materialmente e as ações da sociedade. Por isso, o autor define o espaço como um “conjunto indissociável de sistemas de objetos e sistemas de ações”. Os objetos são estradas, casas, máquinas, cidades, fábricas e tecnologias. As ações são o trabalho, os deslocamentos, o comércio, as decisões e as relações entre as pessoas.
+      </p>
+
+      <p>
+        A técnica é outro ponto central do livro. Ela representa as formas e os instrumentos utilizados pela sociedade para transformar o espaço. Como as técnicas mudam com o passar do tempo, cada lugar apresenta marcas de diferentes períodos históricos. Assim, tempo e espaço estão ligados, pois a história da sociedade fica registrada na transformação dos lugares.
+      </p>
+
+      <p>
+        Santos também apresenta o espaço como um híbrido, porque natureza, objetos, técnicas e ações humanas estão juntos e não podem ser compreendidos separadamente. O autor utiliza ainda a ideia de totalidade, mostrando que um lugar não existe isoladamente: ele faz parte de relações sociais, econômicas, políticas e tecnológicas mais amplas. Dessa forma, o livro mostra que o espaço está sempre em transformação e que entender um lugar também significa entender as relações que o conectam ao mundo.
+      </p>
+
+      <p>
+        Meio Técnico-científico-informacional é a característica do período contemporâneo em que ciência, tecnologia e informação passam a ter grande importância na organização do território. Computadores, satélites, telecomunicações, transportes modernos e redes tornam os lugares cada vez mais conectados, mas essa conexão não acontece de maneira igual para todos.
+      </p>
+
+    </div>
+  </div>
+
+  <script>
+
+    const texto = `
+      A Natureza do Espaço.
+
+      Milton Santos.
+
+      Publicado em 1996, A Natureza do Espaço faz parte da fase madura do pensamento de Milton Santos. O livro reúne ideias que o autor desenvolveu durante anos para explicar como a sociedade produz e transforma o espaço geográfico. Na época, novas tecnologias de informação e comunicação estavam acelerando a circulação de pessoas, informações e mercadorias, tornando necessário pensar o espaço de uma nova maneira.
+
+      Para Milton Santos, o espaço não é apenas o lugar onde as coisas acontecem. Ele é formado pela relação entre aquilo que existe materialmente e as ações da sociedade. Por isso, o autor define o espaço como um conjunto indissociável de sistemas de objetos e sistemas de ações. Os objetos são estradas, casas, máquinas, cidades, fábricas e tecnologias. As ações são o trabalho, os deslocamentos, o comércio, as decisões e as relações entre as pessoas.
+
+      A técnica é outro ponto central do livro. Ela representa as formas e os instrumentos utilizados pela sociedade para transformar o espaço. Como as técnicas mudam com o passar do tempo, cada lugar apresenta marcas de diferentes períodos históricos. Assim, tempo e espaço estão ligados, pois a história da sociedade fica registrada na transformação dos lugares.
+
+      Santos também apresenta o espaço como um híbrido, porque natureza, objetos, técnicas e ações humanas estão juntos e não podem ser compreendidos separadamente. O autor utiliza ainda a ideia de totalidade, mostrando que um lugar não existe isoladamente: ele faz parte de relações sociais, econômicas, políticas e tecnológicas mais amplas. Dessa forma, o livro mostra que o espaço está sempre em transformação e que entender um lugar também significa entender as relações que o conectam ao mundo.
+
+      Meio Técnico-científico-informacional é a característica do período contemporâneo em que ciência, tecnologia e informação passam a ter grande importância na organização do território. Computadores, satélites, telecomunicações, transportes modernos e redes tornam os lugares cada vez mais conectados, mas essa conexão não acontece de maneira igual para todos.
+    `;
+
+    function iniciarLeitura() {
+
+      if (!window.speechSynthesis) {
+        document.getElementById("status").textContent =
+          "Seu navegador não suporta leitura de texto.";
+        return;
+      }
+
+      speechSynthesis.cancel();
+
+      const fala = new SpeechSynthesisUtterance(texto);
+
+      fala.lang = "pt-BR";
+      fala.rate = 0.88;
+      fala.pitch = 1;
+
+      const vozes = speechSynthesis.getVoices();
+
+      let voz = vozes.find(function(v) {
+        return v.lang === "pt-BR";
+      });
+
+      if (!voz) {
+        voz = vozes.find(function(v) {
+          return v.lang.toLowerCase().startsWith("pt");
+        });
+      }
+
+      if (voz) {
+        fala.voice = voz;
+      }
+
+      fala.onstart = function() {
+        document.getElementById("status").textContent =
+          "🔊 Leitura em andamento...";
+      };
+
+      fala.onend = function() {
+        document.getElementById("status").textContent =
+          "✅ Leitura concluída.";
+      };
+
+      fala.onerror = function() {
+        document.getElementById("status").textContent =
+          "⚠️ Erro ao iniciar a leitura.";
+      };
+
+      speechSynthesis.speak(fala);
+    }
+
+    function pararLeitura() {
+
+      if (window.speechSynthesis) {
+        speechSynthesis.cancel();
+      }
+
+      document.getElementById("status").textContent =
+        "⏹ Leitura interrompida.";
+    }
+
+  </script>
+
+</body>
+</html>
